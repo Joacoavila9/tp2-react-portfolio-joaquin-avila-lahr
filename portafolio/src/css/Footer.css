@@ -1,42 +1,49 @@
-/* src/css/Footer.css */
 .footer-container {
-  background-color: #1e293b;
-  border-top: 1px solid #334155;
-  padding: 1.5rem 1rem;
-  text-align: center;
-  color: #f8fafc;
-  margin-top: 3rem;
+  width: min(100% - 2rem, 1100px);
+  margin: 3rem auto 1.25rem;
+  color: #f1f5f9;
 }
-
-.footer-contenido {
+.footer-card {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-  font-size: 0.95rem;
+  gap: 2rem;
+  padding: clamp(1.5rem, 4vw, 2.7rem);
+  background: radial-gradient(ellipse at 100% 0%, rgba(14, 165, 233, 0.16), transparent 45%), linear-gradient(145deg, #14223a, #101a2c);
+  border: 1px solid rgba(96, 165, 250, 0.2);
+  border-radius: 22px;
+  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.2);
 }
-
+.footer-copy { max-width: 520px; }
+.footer-eyebrow { color: #7dd3fc; font-size: 0.72rem; font-weight: 800; letter-spacing: 0.16em; }
+.footer-copy h2 { margin: 0.5rem 0; color: #f8fafc; font-size: clamp(1.4rem, 3vw, 2rem); line-height: 1.2; letter-spacing: -0.03em; }
+.footer-copy p { margin: 0; color: #aebdd0; font-size: 0.94rem; }
 .footer-mail {
-  color: #38bdf8;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  min-width: min(100%, 330px);
+  padding: 1rem 1.1rem;
+  color: #e0f2fe;
+  background: rgba(7, 15, 29, 0.56);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: 14px;
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 }
-
-.footer-mail:hover {
-  color: #61dafb;
-  text-decoration: underline;
-}
-
-/* Barra separadora vertical */
-.footer-separador {
-  color: #64748b;
-  font-weight: bold;
-}
-
-.footer-institucion {
-  color: #94a3b8;
-  font-weight: 600;
-  letter-spacing: 0.5px;
+.footer-mail:hover { color: #f0f9ff; background: rgba(8, 47, 73, 0.56); border-color: #38bdf8; transform: translateY(-2px); }
+.footer-mail:focus-visible { outline: 3px solid rgba(125, 211, 252, 0.7); outline-offset: 3px; }
+.footer-mail-icon { display: grid; width: 42px; height: 42px; flex: 0 0 42px; place-items: center; color: #7dd3fc; background: rgba(14, 165, 233, 0.14); border-radius: 12px; font-size: 1.15rem; }
+.footer-mail-text { display: grid; gap: 0.12rem; min-width: 0; }
+.footer-mail-text small { color: #94a3b8; font-size: 0.75rem; }
+.footer-mail-text strong { overflow-wrap: anywhere; color: #e0f2fe; font-size: 0.92rem; font-weight: 650; }
+.footer-mail-arrow { margin-left: auto; color: #7dd3fc; font-size: 1.1rem; }
+.footer-meta { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 0.55rem; padding: 1.15rem 0 0.25rem; color: #8292a8; font-size: 0.8rem; }
+.footer-meta-dot { color: #38bdf8; }
+.footer-meta-copy { margin-left: auto; }
+@media (max-width: 700px) {
+  .footer-container { width: min(100% - 1.25rem, 1100px); margin-top: 2rem; }
+  .footer-card { align-items: stretch; flex-direction: column; gap: 1.4rem; border-radius: 18px; }
+  .footer-mail { min-width: 0; }
+  .footer-meta { justify-content: flex-start; }
+  .footer-meta-copy { margin-left: 0; }
 }

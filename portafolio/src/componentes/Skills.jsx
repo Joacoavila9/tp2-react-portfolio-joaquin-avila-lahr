@@ -22,7 +22,6 @@
       <div>
         <br />
         <br />
-        <h2 className='projects-titulo'>MIS PROYECTOS</h2>
         </div>
       
     </section>

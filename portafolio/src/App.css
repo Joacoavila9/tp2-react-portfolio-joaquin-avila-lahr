@@ -2,7 +2,7 @@
 .app-layout {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: stretch;
   min-height: 100vh;
   width: 100%;
 }
@@ -10,7 +10,12 @@
 .contenido {
   flex: 1;
   min-width: 0;
-  padding: 40px;
+  padding: 48px;
+  background: linear-gradient(
+    135deg,
+    rgba(15, 23, 42, 0.35),
+    rgba(11, 17, 32, 0.15)
+  );
 }
 
 .pagina {
@@ -21,6 +26,24 @@
 
 .pagina h2 {
   margin-bottom: 24px;
+  color: #f8fafc;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.pagina p {
+  margin-bottom: 16px;
+  color: #cbd5e1;
+  font-size: 1rem;
+}
+
+.pagina a {
+  color: #60a5fa;
+}
+
+.pagina a:hover {
+  color: #93c5fd;
 }
 
 .proyectos-lista {
@@ -29,8 +52,20 @@
   gap: 24px;
 }
 
-.pagina a {
-  color: #60a5fa;
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.pagina {
+  animation: aparecer 0.35s ease;
 }
 
 @media (max-width: 768px) {
@@ -40,6 +75,10 @@
 
   .contenido {
     width: 100%;
-    padding: 24px 16px;
+    padding: 28px 20px;
+  }
+
+  .pagina h2 {
+    font-size: 1.65rem;
   }
 }
