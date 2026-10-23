@@ -14,7 +14,7 @@
       
       <div className="skills-grid">
         {conocimientos.map((conocimiento) => (
-          <div className="skill-card">
+          <div className="skill-card" key={conocimiento}>
             <span className="skill-badge">{conocimiento}</span>
           </div>
         ))}

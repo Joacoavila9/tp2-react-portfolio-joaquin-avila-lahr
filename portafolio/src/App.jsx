@@ -1,8 +1,7 @@
 
 import { Routes, Route } from 'react-router-dom'
-import { useState } from 'react'
 
-import { persona, proyectos as proyectosIniciales } from './datos/portfolio'
+import { persona } from './datos/portfolio'
 
 import Sidebar from './componentes/Sidebar'
 
@@ -15,8 +14,6 @@ import Contacto from './paginas/Contacto'
 import './App.css'
 
 const App = () => {
-  const [proyectos, setProyectos] = useState(proyectosIniciales)
-
   return (
     <div className="app-layout">
       <Sidebar

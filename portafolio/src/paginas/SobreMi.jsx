@@ -1,7 +1,8 @@
 
+import { persona } from '../datos/portfolio'
 import About from '../componentes/About'
 
-const SobreMi = ({ persona }) => {
+const SobreMi = () => {
   return (
     <section className="pagina">
       <About
@@ -20,3 +21,4 @@ const SobreMi = ({ persona }) => {
 }
 
 export default SobreMi
+

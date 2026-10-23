@@ -1,7 +1,7 @@
-
+import { proyectos } from '../datos/portfolio'
 import Projects from '../componentes/Projects'
 
-const Proyectos = ({ proyectos }) => {
+const Proyectos = () => {
   return (
     <section className="pagina">
       <h2>Mis proyectos</h2>
@@ -20,3 +20,4 @@ const Proyectos = ({ proyectos }) => {
 }
 
 export default Proyectos
+

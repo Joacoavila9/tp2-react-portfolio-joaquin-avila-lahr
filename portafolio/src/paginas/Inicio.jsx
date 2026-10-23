@@ -1,6 +1,7 @@
+import { persona } from '../datos/portfolio'
 import Hero from '../componentes/Hero'
 
-const Inicio = ({ persona }) => {
+const Inicio = () => {
   return (
     <section className="pagina">
       <Hero
